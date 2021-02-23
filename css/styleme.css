@@ -36,4 +36,11 @@ ul {
 ol {
   list-style-type: upper-roman;
 }
+dt {
+  color: darkblue;
+}
+
+dd {
+  color: cornflowerblue;
+}
   
