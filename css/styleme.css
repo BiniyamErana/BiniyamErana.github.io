@@ -13,6 +13,13 @@ body {
 a {
   color: red;
 }
+p.home {
+  margin: 15px 18px 15px 15px;
+  text-align: right;
+}
+a#home {
+  color: black;
+}
 
 a:hover {
   color: green;
