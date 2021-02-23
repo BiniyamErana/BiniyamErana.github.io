@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(224, 229, 231);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 50px 250px 75px 150px;
+  }
+  
+h1 {
+    margin: 15px 15px 15px 15px;
+    border-bottom: 2px solid rgb(241, 71, 71);
+    padding-bottom: 5px;
+}
+
+a {
+  color: red;
+}
+
+th,td {
+    margin: 5px;
+    padding: 5px;
+}
+
+ul {
+  font-style: italic;
+}
+ol {
+  list-style-type: upper-roman;
+}
+  
