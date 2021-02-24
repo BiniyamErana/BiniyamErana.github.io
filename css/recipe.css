@@ -43,8 +43,13 @@ blockquote {
 	
 }
 
-.copyright > p{
+.copyright {
   text-align: right;
-  padding-right: 730px;
   font-family: 'Courier New', monospace;
+}
+
+table.menu {
+  width: auto;
+  margin-right: 0px;
+  margin-left: auto;
 }
