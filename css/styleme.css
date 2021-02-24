@@ -20,7 +20,9 @@ p.home {
 a#home {
   color: black;
 }
-
+.home {
+  padding-left: 620px;
+}
 a:hover {
   color: green;
 }
