@@ -5,9 +5,10 @@ body {
   }
   
 #name {
-    margin: 15px 15px 15px 15px;
+
     border-bottom: 2px solid rgb(241, 71, 71);
     padding-bottom: 5px;
+    text-align: right;
 }
 
 a {
