@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>State Management Quiz</title>
+<link rel="stylesheet" href="css/styleme.css">
+</head>
+<body>
+<h2>State Management Quiz</h2>
+<p id=name> <span class=home><a id=home href="https://biniyamerana.github.io/index.html"><strong>Home</strong></a></span></p>
+
+<div>
+    <p> <strong style="color:blue;">1.</strong> Can post requests be bookmarked? What are the problems? <br>
+        <em><strong>Answer:</strong></em> A POST cannot be bookmarked. Attempting to bookmark a POST will just result in a GET operation on the URL.
+    </p>
+    <p> <strong style="color:blue;">2.</strong> What is the purpose of request dispatching? <br>
+        <em><strong>Answer:</strong></em> Request Dispatcher is an interface whose implementation defines an object which can dispatch the request to any resources on the server.
+    </p>
+    <p> <strong style="color:blue;">3.</strong> What is the difference between redirect and request dispatch? <br>
+        <em><strong>Answer:</strong></em> The RequestDispatcher interface allows you to do a server side forward/include whereas sendRedirect() does a client side redirect. SendRedirect() will search the content between the servers.
+    </p>
+    <p> <strong style="color:blue;">4.</strong> What is an attribute? <br>
+        <em><strong>Answer:</strong></em> An attribute is an object that is used to share information in a web app. Attribute allows Servlets to share information among themselves. 
+    </p>
+    <p> <strong style="color:blue;">5.</strong> What is the difference between attributes and parameters? <br>
+        <em><strong>Answer:</strong></em> The key difference between attribute and parameter is that an attribute is a variable of any type that is declared directly in a class while a parameter is a variable defined by the function that receives a value when it is called.
+    </p>
+    <p> <strong style="color:blue;">6.</strong> What are dangers of using attributes? <br>
+        <em><strong>Answer:</strong></em> Information can be leaked.
+    </p>
+    <p> <strong style="color:blue;">7.</strong> What does it mean to say that http is stateless? Give an example of a stateful protocol. <br>
+        <em><strong>Answer:</strong></em> HTTP is called as a stateless protocol because each request is executed independently, without any knowledge of the requests that were executed before it, which means once the transaction ends the connection between the browser and the server is also lost. FTP is a stateful protocol.
+    </p>
+    <p> <strong style="color:blue;">8.</strong> Give 5 different methods for maintaining state information (count each attribute scope as one method). <br>
+        <em><strong>Answer:</strong></em> Five different methods for maintain State information are:
+        <ol>
+        <li>request scope: destroyed when servlet finishes processing request</li>
+        <li>session scope: destroyed when user closes browser</li>
+        <li>application scope destroyed when Container stopped.</li>
+        <li>Cookies saved on browser, temporary (deleted when the browser closes) permanent</li>
+        <li>Hidden fields on a form</li>
+    </ol>
+    </p>
+    <p> <strong style="color:blue;">9.</strong> How long does a session last? <br>
+        <em><strong>Answer:</strong></em> By default, a session lasts until there's 30 minutes of inactivity, but you can adjust this limit so a session lasts from a few seconds to several hours.
+    </p>
+    <p> <strong style="color:blue;">10.</strong> What is a cookie, and how long does a cookie last? <br>
+        <em><strong>Answer:</strong></em> A cookie is a small piece of information that is persisted between the multiple client requests. A cookie has a name, a single value, and optional attributes such as a comment, path and domain qualifiers, a maximum age, and a version number. If there's no expiration time in cookie it's going to be around until the browser is killed.
+    </p>
+    <p> <strong style="color:blue;">11.</strong> What is the purpose of URL rewriting? <br>
+        <em><strong>Answer:</strong></em> Url rewriting is a process of appending or modifying any url structure while loading a page. The request made by client is always a new request and the server can not identify whether the current request is send by a new client or the previous same client.
+    </p>
+    <p> <strong style="color:blue;">12.</strong> Why does the request attribute report ‘null’ for the maintaining state demo? <br>
+        <em><strong>Answer:</strong></em> Thsi is the default value for request attribute.
+    </p>
+</div>
+
+</table>
+
+<table>
+    <tr>
+    <td>
+        <a href="https://validator.w3.org/check/referer">
+            <img src="img/valid-xhtml10.png" alt="html validator"/>
+        </a>
+    </td>
+    <td>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <img src="img/w3c-css.png" alt="css validator"/>
+        </a>
+    </td>
+    </tr>
+</table> 
+
+</body>
+</html> 
