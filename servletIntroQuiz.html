@@ -9,15 +9,35 @@
 <p id=name> <span class=home><a id=home href="https://biniyamerana.github.io/index.html"><strong>Home</strong></a></span></p>
 
 <div>
-    <p> 1. What is the difference between a web server and a web container? </p>
-    <p> 2. What is a servlet? </p>
-    <p> 3. How do web servers and web containers interact with servlets? </p>
-    <p> 4. Who creates request objects? </p>
-    <p> 5. What are the states in the servlet lifecycle? </p>
-    <p> 6. Who calls init and when? </p>
-    <p> 7. Which of init, service, and doGet should you override? </p>
-    <p> 8. In what sense are servlets multi-threaded? </p>
-    <p> 9. What are the implications of this for servlet instance variables? </p>
+    <p> 1. What is the difference between a web server and a web container? 
+        Answer: Web server is hardware prepared for clients to interact with the whole system while
+        web container is solely responsible for connecting and processing client side information with knowing the
+        outside sources, such as database and other applications.
+    </p>
+    <p> 2. What is a servlet? 
+        Answer: Servlet is a class for handling a request from the client side.
+    </p>
+    <p> 3. How do web servers and web containers interact with servlets? 
+        Answer: creating servlet object and using methods such as init, service, destroy...
+    </p>
+    <p> 4. Who creates request objects? 
+        Answer: Client side creates the request object.
+    </p>
+    <p> 5. What are the states in the servlet lifecycle? 
+        Answer: init, service, destroy
+    </p>
+    <p> 6. Who calls init and when? 
+        Answer: Web container calls init when servlet object first created.
+    </p>
+    <p> 7. Which of init, service, and doGet should you override? 
+        Answer: doGet
+    </p>
+    <p> 8. In what sense are servlets multi-threaded? 
+        Answer: In sense of calling "service" method, it is multi-threaded.
+    </p>
+    <p> 9. What are the implications of this for servlet instance variables? 
+        Answer: Instance variables can be shared concurrently.
+    </p>
 </div>
 
 </table>
