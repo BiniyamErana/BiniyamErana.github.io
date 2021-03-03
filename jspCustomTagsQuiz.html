@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>State Management Quiz</title>
+<link rel="stylesheet" href="css/styleme.css">
+</head>
+<body>
+<h2>State Management Quiz</h2>
+<p id=name> <span class=home><a id=home href="https://biniyamerana.github.io/index.html"><strong>Home</strong></a></span></p>
+
+<div>
+    <p> <strong style="color:blue;">1.</strong> Rewrite the JSP page in the first demo (forEach) to use scripting instead of the JSTL forEach. <br>
+        <em><strong>Answer:</strong></em> <% Student[] table = (Student[]) request.getAttribute("students");
+        for (Student stu: table) {
+        %>
+                <tr><td> 
+                <%= stu.getName() %>
+                </td>
+                <td>
+                <%= stu.getAge() %>
+                </td></tr>
+         <% } %>
+    
+    </p>
+    <p> <strong style="color:blue;">2.</strong> How do custom tags relate to JSTL? <br>
+        <em><strong>Answer:</strong></em> They are all JSP actions. Standard actions are part of any servlet web container. JSTL is a separate library that needs to be added to an application. 
+    </p>
+    <p> <strong style="color:blue;">3.</strong> What is the role of the URI in the TLD and the taglib directive? <br>
+        <em><strong>Answer:</strong></em> It is a unique identifier for a set of custom tags. It allows the container to find the TLD for the tags in that taglib directive.
+    </p>
+    <p> <strong style="color:blue;">4.</strong> What is a tag handler class? <br>
+        <em><strong>Answer:</strong></em> Java class that extends SimpleTagSupport. Has a doTag method to generate the markup for the tag, and setters for any attributes in the tag. Tag developer writes this class.
+    </p>
+    <p> <strong style="color:blue;">5.</strong> What is the role of attribute setters in a tag handler class? <br>
+        <em><strong>Answer:</strong></em> The container will call the setters to give the tag handler object the values from the tag attributes so that the doTag method can use these values when generating the markup.
+    </p>
+    <p> <strong style="color:blue;">6.</strong> What is the role of the doTag() method in a tag handler class? <br>
+        <em><strong>Answer:</strong></em> This is the method that generates the markup for the tag.
+    </p>
+    <p> <strong style="color:blue;">7.</strong> What does the operation getJspContext().getOut().write(“Hi Bob”) do when called in a doTag() method? <br>
+        <em><strong>Answer:</strong></em> It will write "Hi Bob" to the output stream that this tag is writing to.
+    </p>
+    <p> <strong style="color:blue;">8.</strong> What does the operation getJspBody().invoke(null) do when called in a doTag() method? <br>
+        <em><strong>Answer:</strong></em> Processes the body of the tag—meaning that any template text will be sent to the output stream and any JSP scripting or EL will be evaluated and included in the output text.
+    </p>
+    
+</div>
+
+</table>
+
+<table>
+    <tr>
+    <td>
+        <a href="https://validator.w3.org/check/referer">
+            <img src="img/valid-xhtml10.png" alt="html validator"/>
+        </a>
+    </td>
+    <td>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <img src="img/w3c-css.png" alt="css validator"/>
+        </a>
+    </td>
+    </tr>
+</table> 
+
+</body>
+</html> 

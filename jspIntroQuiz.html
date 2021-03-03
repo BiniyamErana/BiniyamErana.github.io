@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>State Management Quiz</title>
+<link rel="stylesheet" href="css/styleme.css">
+</head>
+<body>
+<h2>State Management Quiz</h2>
+<p id=name> <span class=home><a id=home href="https://biniyamerana.github.io/index.html"><strong>Home</strong></a></span></p>
+
+<div>
+    <p> <strong style="color:blue;">1.</strong> What is the main value of Java Server Pages? <br>
+        <em><strong>Answer:</strong></em> Simplifies writing HTML compared to how it was done with servlets.
+    </p>
+    <p> <strong style="color:blue;">2.</strong> How are JSP pages related to servlets? <br>
+        <em><strong>Answer:</strong></em> JSP is essentially a servlet, one should understand servlets to effectively deal with JSPs.
+    </p>
+    <p> <strong style="color:blue;">3.</strong> How are JSP pages related to HTML? <br>
+        <em><strong>Answer:</strong></em> JSP simply puts Java inside HTML pages. but JSP runs on the server, HTML runs on browser.
+    </p>
+    <p> <strong style="color:blue;">4.</strong> Give an example of a JSP scriptlet and show how it will look in the JSP servlet. <br>
+        <em><strong>Answer:</strong></em> A JSP element that provides the embedded Java statements to be executed as part of the service method of the Servlet class. 
+        <% ArrayList list = new ArrayList();
+        list.add(“foo”);
+        %>
+        It is translated in Servlet in _jspService Method
+        
+        ArrayList list = new ArrayList();
+        list.add("foo");
+         
+    </p>
+    <p> <strong style="color:blue;">5.</strong> Give an example of a JSP declaration and show how it will look in the JSP servlet. <br>
+        <em><strong>Answer:</strong></em> A JSP element that provides the embedded Java declaration statements to be inserted into the Servlet class.
+        <% … %>
+        <%! int count=0 %> 
+        
+        It is translated in Servlet in as instance field under the class.
+        int count =0;        
+        
+    </p>
+    <p> <strong style="color:blue;">6.</strong> Give an example of a JSP comment and show how it will look in the JSP servlet. <br>
+        <em><strong>Answer:</strong></em> < % -- this is a JSP comment, note the difference from an html comment, which uses ! -- >   
+        It will not appear in the JSP servlet.  It is removed when the container translates the JSP to java.
+        
+    </p>
+    <p> <strong style="color:blue;">7.</strong> Give an example of a JSP expression and show how it will look in the JSP servlet. <br>
+        <em><strong>Answer:</strong></em> A JSP element that provides the embedded Java expressions to be evaluated as part of the service method of the Servlet class.
+        <%= ++count %>
+        It is translated in Servlet in _jspService Method
+        out.println(++count);
+        
+    </p>
+    <p> <strong style="color:blue;">8.</strong> Give an example of a JSP directive and show how it will look in the JSP servlet. <br>
+        <em><strong>Answer:</strong></em> <%@ page import="java.util.*" %>
+        and it will look in the jsp servlet import java.util.*;
+        
+    </p>
+    <p> <strong style="color:blue;">9.</strong> Explain how an EL expression is evaluated. <br>
+        <em><strong>Answer:</strong></em> when evaluating the expression ${product}, the container will look for product in the page, request, session, and application scopes and will return its value. If product is not found, null is returned
+    </p>
+    <p> <strong style="color:blue;">10.</strong> Explain how servlet attributes are involved in EL expressions. <br>
+        <em><strong>Answer:</strong></em> EL expressions assume that the first identifier in the expression is the key of a servlet attribute, and searches through the different attribute scopes using that key.
+    </p>
+    <p> <strong style="color:blue;">11.</strong> Explain how servlets and JSPs use request dispatch to interact. <br>
+        <em><strong>Answer:</strong></em> Servlets make jsp take over a request by first 
+      <ol>
+        
+        <li>Putting the model data into a request scope (request.setAttributes(“styles”, result).</li>
+        <li>Getting the dispatcher for view JSP (request.getRequestDispatcher(“result.jsp”);</li>
+        <li>Tell the JSP to take over by passing the request and response object
+        (view.forward(request, response))</li>
+    </ol>  
+    </p>
+
+</div>
+
+</table>
+
+<table>
+    <tr>
+    <td>
+        <a href="https://validator.w3.org/check/referer">
+            <img src="img/valid-xhtml10.png" alt="html validator"/>
+        </a>
+    </td>
+    <td>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <img src="img/w3c-css.png" alt="css validator"/>
+        </a>
+    </td>
+    </tr>
+</table> 
+
+</body>
+</html> 
