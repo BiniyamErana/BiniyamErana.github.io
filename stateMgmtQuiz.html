@@ -10,22 +10,29 @@
 
 <div>
     <p> <strong style="color:blue;">1.</strong> Can post requests be bookmarked? What are the problems? <br>
-        <em><strong>Answer:</strong></em> A POST cannot be bookmarked. Attempting to bookmark a POST will just result in a GET operation on the URL.
+        <em><strong>Answer:</strong></em> They can be bookmarked, but only the url is saved.  Any form input parameters that would be included in the body are lost, so the request might not work as expected from the bookmark.
     </p>
     <p> <strong style="color:blue;">2.</strong> What is the purpose of request dispatching? <br>
-        <em><strong>Answer:</strong></em> Request Dispatcher is an interface whose implementation defines an object which can dispatch the request to any resources on the server.
+        <em><strong>Answer:</strong></em> 
+        <ol>
+        <li>To reuse functionality</li>
+        <li>Separate logic + templating (servlet + JSP)</li>
+        <li>To separate responsibilities</li>
+        </ol>
     </p>
     <p> <strong style="color:blue;">3.</strong> What is the difference between redirect and request dispatch? <br>
-        <em><strong>Answer:</strong></em> The RequestDispatcher interface allows you to do a server side forward/include whereas sendRedirect() does a client side redirect. SendRedirect() will search the content between the servers.
+        <em><strong>Answer:</strong></em> Request dispatch (forward) happens entirely on the server side.  The client is unaware of the forward.  Redirect involves an extra roundtrip to the client to tell it to make a request to a new URL.  This updates the address bar of the browser.  Forward can pass along the HTTPrequest and HTTPresponse Java objects to another servlet on the server.
     </p>
     <p> <strong style="color:blue;">4.</strong> What is an attribute? <br>
-        <em><strong>Answer:</strong></em> An attribute is an object that is used to share information in a web app. Attribute allows Servlets to share information among themselves. 
+        <em><strong>Answer:</strong></em> An attribute( container attribute) is an object set(bound) into one of three other servlet API objects( which are ServletContext, HttpServletRequest  and HttpSession. <br>
+        It has a return type of object and needs to be cast to an appropriate subtype on retrieval.
     </p>
     <p> <strong style="color:blue;">5.</strong> What is the difference between attributes and parameters? <br>
-        <em><strong>Answer:</strong></em> The key difference between attribute and parameter is that an attribute is a variable of any type that is declared directly in a class while a parameter is a variable defined by the function that receives a value when it is called.
+        <em><strong>Answer:</strong></em> Attributes: are container attributes, they have 3 scopes.It is possible to set them using setAttribute(String name, Object value). They have return type of Object and need to be cast and use method getAttribute(String name). <br>
+        Where as Parameters are inputs from form and always String type.  Uses getParameter and getParameterValue methods.
     </p>
     <p> <strong style="color:blue;">6.</strong> What are dangers of using attributes? <br>
-        <em><strong>Answer:</strong></em> Information can be leaked.
+        <em><strong>Answer:</strong></em> Shared resources - need to synchronize context or session values if there is any concern about race conditions.
     </p>
     <p> <strong style="color:blue;">7.</strong> What does it mean to say that http is stateless? Give an example of a stateful protocol. <br>
         <em><strong>Answer:</strong></em> HTTP is called as a stateless protocol because each request is executed independently, without any knowledge of the requests that were executed before it, which means once the transaction ends the connection between the browser and the server is also lost. FTP is a stateful protocol.
@@ -41,16 +48,16 @@
     </ol>
     </p>
     <p> <strong style="color:blue;">9.</strong> How long does a session last? <br>
-        <em><strong>Answer:</strong></em> By default, a session lasts until there's 30 minutes of inactivity, but you can adjust this limit so a session lasts from a few seconds to several hours.
+        <em><strong>Answer:</strong></em> Until the session object times out (seconds pass without any use) or until  session.invalidate() is called or when application is undeployed.
     </p>
     <p> <strong style="color:blue;">10.</strong> What is a cookie, and how long does a cookie last? <br>
-        <em><strong>Answer:</strong></em> A cookie is a small piece of information that is persisted between the multiple client requests. A cookie has a name, a single value, and optional attributes such as a comment, path and domain qualifiers, a maximum age, and a version number. If there's no expiration time in cookie it's going to be around until the browser is killed.
+        <em><strong>Answer:</strong></em> Name/value pair of strings sent as a message header to/from server depends on settings - can be temporary (after brower is closed) or permanent (live until expired).
     </p>
     <p> <strong style="color:blue;">11.</strong> What is the purpose of URL rewriting? <br>
-        <em><strong>Answer:</strong></em> Url rewriting is a process of appending or modifying any url structure while loading a page. The request made by client is always a new request and the server can not identify whether the current request is send by a new client or the previous same client.
+        <em><strong>Answer:</strong></em> This is a way for containers to support sessions even if cookies are turned off in a browser.  Rather than sending the session id in the Cookie-set header, the container will send it as part of the URL. (the same term is now often used to describe techniques for making urls easier to read by humans in the browser address bar—e.g., “pretty urls”).
     </p>
     <p> <strong style="color:blue;">12.</strong> Why does the request attribute report ‘null’ for the maintaining state demo? <br>
-        <em><strong>Answer:</strong></em> Thsi is the default value for request attribute.
+        <em><strong>Answer:</strong></em> Because request attributes are always reset when a new request is made.
     </p>
 </div>
 

@@ -10,33 +10,43 @@
 
 <div>
     <p> <strong style="color:blue;">1.</strong> What is the difference between a web server and a web container? <br>
-        <em><strong>Answer:</strong></em> Web server is hardware prepared for clients to interact with the whole system while
-        web container is solely responsible for connecting and processing client side information with knowing the
-        outside sources, such as database and other applications.
+        <em><strong>Answer:</strong></em> WebServer is to hands the request (dynamic servlet request) from the client to the web container and web container is the one which manages the servlet and gets the response and hands back the response (dynamic content) to the web server.
+        <br>When a web server(Apache) receives a request from the client and if the request is about generating dynamic contents, then the web server hands the request to the Web Container(Tomcat/Glassfish/etc).The web container is the one which has the servlet that is deployed and it is responsible for calling service method in the servlet. 
+        
     </p>
     <p> <strong style="color:blue;">2.</strong> What is a servlet? <br>
-        <em><strong>Answer:</strong></em> A servlet is server-side java class that can handle http requests and return dynamic content.
+        <em><strong>Answer:</strong></em> Servlet is Java class that extends HttpServlet and which overrides the method doPost and doGet.
     </p>
     <p> <strong style="color:blue;">3.</strong> How do web servers and web containers interact with servlets? <br>
-        <em><strong>Answer:</strong></em> creating servlet object and using methods such as init, service, destroy...
+        <em><strong>Answer:</strong></em> Web Server hands over the client request to the web container if the response has to be dynamic.
+        Web Container has the servlet deployed and calls the service() method of the Servlet in a new thread.The container gives the request and response object to the servlet.        
     </p>
     <p> <strong style="color:blue;">4.</strong> Who creates request objects? <br>
-        <em><strong>Answer:</strong></em> Client side creates the request object.
+        <em><strong>Answer:</strong></em> Web Container.
     </p>
     <p> <strong style="color:blue;">5.</strong> What are the states in the servlet lifecycle? <br>
-        <em><strong>Answer:</strong></em> init, service, destroy
+        <em><strong>Answer:</strong></em> 
+        <ol>
+            <li>Load </li>
+            <li>Create</li>
+            <li>Init - init()</li>
+            <li>Service - service() </li>
+            <li>Destroy - destroy() </li>
+        </ol>
     </p>
     <p> <strong style="color:blue;">6.</strong> Who calls init and when? <br>
-        <em><strong>Answer:</strong></em> Web container calls init when servlet object first created.
+        <em><strong>Answer:</strong></em> The web container call the init() method and it is called only once just after the Servlet constructor and before the service() method(ie the client requests) is called.
     </p>
     <p> <strong style="color:blue;">7.</strong> Which of init, service, and doGet should you override? <br>
-        <em><strong>Answer:</strong></em> doGet
+        <em><strong>Answer:</strong></em> We can override init() and doGet() method. Init can be overridden when there is a need for initialization such as registering the object or initializing database connection etc. doGet() Method has to be overridden to return a customized response.
     </p>
     <p> <strong style="color:blue;">8.</strong> In what sense are servlets multi-threaded? <br>
-        <em><strong>Answer:</strong></em> In sense of calling "service" method, it is multi-threaded.
+        <em><strong>Answer:</strong></em> The web container creates a new thread for every client request. The container runs multiple threads to process multiple requests to a single servlet.
     </p>
     <p> <strong style="color:blue;">9.</strong> What are the implications of this for servlet instance variables? <br>
-        <em><strong>Answer:</strong></em> Instance variables can be shared concurrently.
+        <em><strong>Answer:</strong></em> There is only one instance of the Servlet and whichever requests comes from the client, the container creates a thread and calls the service() method of this single instance with new request and response objects.  Hence whatever the call may be it refers to the same instance.
+        <br>MAIN POINT:  instance variables are shared by all requests that come to this servlet at the same time.  Unless you control for mutual exclusion there might be race conditions.  Therefore, you should avoid using instance variables in servlets.
+        
     </p>
 </div>
 
