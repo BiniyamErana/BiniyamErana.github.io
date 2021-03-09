@@ -28,7 +28,22 @@
     <p> <strong style="color:blue;">3.</strong> Write functions booyah1 and booyah2 so that in both cases below, an alert box comes up after 2 seconds that says “BOOYAH!” <br>
         <p style="padding-left: 5em;">setTimeout(booyah1, 2000);<br>
         setTimeout(booyah2(), 2000);</p>
-        <em><strong>Answer:</strong></em> The setTimeout without function parenthesis take the timeout value to display output but the setTimeout with function parenthesis doesnot take time value. It will give output instantly.
+        <em><strong>Answer:</strong></em> 
+        
+        <p style="padding-left: 5em;">
+            window.onload = function (){<br>
+                setTimeout(booyah1, 2000);<br>
+                setTimeout(booyah2(), 2000);<br>
+            }<br>
+            function booyah1() {<br>
+            alert("BOOYAH!");<br>
+      }<br>
+      
+      function booyah2() {<br>
+          alert("BOOYAH!");<br>
+      }<br>
+      
+      </p>
     </p>
     <p> <strong style="color:blue;">4.</strong> What is "Unobtrusive Javascript"? What is the practical application of Unobtrusive Javascript (and the reasons for using it)? <br>
         <em><strong>Answer:</strong></em> "Unobtrusive Javascript" means separation of content (HTML) and behavior (Javascript). It is the separation of behaviour from markup or structure. Unobtrusive JavaScript is the way of writing JavaScript language in which we properly separate Document Content and Script Content thus allowing us to make a clear distinction between them.
