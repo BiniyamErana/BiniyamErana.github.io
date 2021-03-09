@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Javascript Exercises</title>
+<link rel="stylesheet" href="css/styleme.css">
+</head>
+<body>
+<h2>Javascript Exercises</h2>
+<p id=name> <span class=home><a id=home href="https://biniyamerana.github.io/index.html"><strong>Home</strong></a></span></p>
+
+<div>
+    <p> <strong style="color:blue;">1.</strong> What is the difference between the following 2 statements? <br>
+        <p style="padding-left: 5em;">setTimeout(booyah, 2000);<br>
+        setTimeout(booyah(), 2000);</p>
+        <em><strong>Answer:</strong></em> The setTimeout without function parenthesis take the timeout value to display output but the setTimeout with function parenthesis doesnot take time value. It will give output instantly.
+    </p>
+    <p> <strong style="color:blue;">2.</strong> What do the following 2 alerts display (answer without running the code)? <br>
+        
+        <p style="padding-left: 5em;">var myfunc = function(a, x) {<br>
+            return a * x;<br>
+           };<br>
+           var x = myfunc(2, 3);<br>
+           var y = myfunc;<br>
+           alert(x);<br>
+           alert(y(2,3));</p>
+        <em><strong>Answer:</strong></em> It will first give alert as 6 using x as alert, then it will give another alert as 6 using y. 
+    </p>
+    <p> <strong style="color:blue;">3.</strong> Write functions booyah1 and booyah2 so that in both cases below, an alert box comes up after 2 seconds that says “BOOYAH!” <br>
+        <p style="padding-left: 5em;">setTimeout(booyah1, 2000);<br>
+        setTimeout(booyah2(), 2000);</p>
+        <em><strong>Answer:</strong></em> The setTimeout without function parenthesis take the timeout value to display output but the setTimeout with function parenthesis doesnot take time value. It will give output instantly.
+    </p>
+    <p> <strong style="color:blue;">4.</strong> What is "Unobtrusive Javascript"? What is the practical application of Unobtrusive Javascript (and the reasons for using it)? <br>
+        <em><strong>Answer:</strong></em> "Unobtrusive Javascript" means separation of content (HTML) and behavior (Javascript). It is the separation of behaviour from markup or structure. Unobtrusive JavaScript is the way of writing JavaScript language in which we properly separate Document Content and Script Content thus allowing us to make a clear distinction between them.
+
+        The major benefits of Unobtrusive JavaScripts are:
+
+        <ul>
+            <li>Separation of the behavior from the markup (as happened for CSS with the separation of the presentation from the markup)</li>
+            <li>Reusable code (both HTML and JavaScript code)</li>
+            <li>Progressive enhancement</li>
+            <li>Capability detection and gracefully degradation, as the opposite of browser detection. You can easily skip an entire JavaScript fragment if the current browser doesn't support it or likewise use the JavaScript to replace features not natively supported (such as HTML 5 features).</li>
+            <li>Better cache support</li>
+        </ul>
+    </p>
+    
+    
+</div>
+
+</table>
+
+<table>
+    <tr>
+    <td>
+        <a href="https://validator.w3.org/check/referer">
+            <img src="img/valid-xhtml10.png" alt="html validator"/>
+        </a>
+    </td>
+    <td>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <img src="img/w3c-css.png" alt="css validator"/>
+        </a>
+    </td>
+    </tr>
+</table> 
+
+</body>
+</html> 
