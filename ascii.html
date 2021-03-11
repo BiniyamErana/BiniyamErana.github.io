@@ -1,0 +1,65 @@
+<!DOCTYPE>
+<HTML lang="en">
+<head>
+<script src="script/animation.js" type="text/javascript"></script>
+<script src="script/ascii.js" type="text/javascript"></script>
+<link href="css/ascii.css" rel="stylesheet">
+<meta charset="utf-8">
+<title>Javascript and ASCII Animation</title>
+</head>
+
+<body>
+	<h1>CS472: ASCII Animation Viewer</h1>
+	<textarea id="field" rows="20" cols="80"></textarea>
+	<div id="controlArea">
+		<fieldset>
+			<legend>Play Controls:</legend>
+			<button id="start">Start</button>
+			<button id="stop">Stop</button>
+		</fieldset>
+		<fieldset>
+			<legend>Animation:</legend>
+			<select id="animation">
+				<option value="blank" selected>Blank</option>
+				<option value="exercise">Exercise</option>
+				<option value="juggler">Juggler</option>
+				<option value="bike">Bike</option>
+				<option value="dive">Dive</option>
+				<option value="custom">Welcome</option>
+			</select>
+		</fieldset>
+		<fieldset>
+			<legend>Size:</legend>
+			<select name="size" id="size">
+				<option value="7pt">Tiny</option>
+				<option value="10pt">Small</option>
+				<option value="12pt" selected>Medium</option>
+				<option value="16pt">Large</option>
+				<option value="24pt">Extra Large</option>
+				<option value="32pt">XXL</option>
+			</select>
+		</fieldset>
+		<fieldset>
+			<legend>Speed:</legend>
+			<label><input type="checkbox" id="speed" />Turbo</label>
+		</fieldset>
+    </div>
+    <p id=name> <span class=home><a id=home href="https://biniyamerana.github.io/index.html"><strong>Home</strong></a></span></p>
+    
+	<table>
+        <tr>
+        <td>
+            <a href="https://validator.w3.org/check/referer">
+                <img src="img/valid-xhtml10.png" alt="html validator"/>
+            </a>
+        </td>
+        <td>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">
+                <img src="img/w3c-css.png" alt="css validator"/>
+            </a>
+        </td>
+        </tr>
+    </table> 
+
+</body>
+</HTML>
