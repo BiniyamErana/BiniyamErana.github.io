@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Javascript Scope Exercises</title>
+<link rel="stylesheet" href="css/styleme.css">
+</head>
+<body>
+<h2>Javascript Scope Exercises</h2>
+<p id=name> <span class=home><a id=home href="https://biniyamerana.github.io/index.html"><strong>Home</strong></a></span></p>
+
+<div>
+    <p> <strong style="color:blue;">1.</strong> Determine what this Javascript code will print out (without running it): <br>
+        <pre>
+            x = 1;
+            var a = 5;
+            var b = 10;
+            var c = function(a, b, c) {
+                    var x = 10;
+                    document.write(x);
+                    document.write(a);
+                    var f = function(a, b, c) {
+                            b = a;
+                            document.write(b);
+                            b = c;
+                            var x = 5;
+                            }
+                    f(a,b,c);
+                    document.write(b);
+                    }
+            c(8,9,10);
+            document.write(b);
+            document.write(x);
+            }
+        </pre>
+        <em><strong>Answer:</strong></em> 10,8,8,9,10,1
+    </p>
+    <p> <strong style="color:blue;">2.</strong> What is the difference between a method and function? <br>
+        <em><strong>Answer:</strong></em> A function is a block of code written to perform some specific set of tasks. We can define a function using the function keyword, followed by Name and optional parameters. Body of function is enclosed in Curly braces.
+        <br>
+        A JavaScript method is a property of an object that contains a function definition. Methods are functions stored as object properties. 
+    </p>
+    <p> <strong style="color:blue;">3.</strong> What does 'this' refer to when used in a Java method? <br>
+        <em><strong>Answer:</strong></em> Within an instance method or a constructor, this is a reference to the current object — the object whose method or constructor is being called.
+      </p>
+    </p>
+    <p> <strong style="color:blue;">4.</strong> What does 'this' refer to when used in a JavaScript method? <br>
+        <em><strong>Answer:</strong></em> In JavaScript, the property of an object can be a method or a simple value. When an object's method is invoked, then this refers to the object which contains the method being invoked.
+    </p>
+    <p> <strong style="color:blue;">5.</strong> What does 'this' refer to when used in a JavaScript constructor function? <br>
+        <em><strong>Answer:</strong></em> The value of this , when used in an object, is the object itself. In a constructor function this does not have a value. It is a substitute for the new object. The value of this will become the new object when a new object is created.
+    </p>
+    <p> <strong style="color:blue;">6.</strong> Assume object x is the prototype for object y in Javascript. Object x has a method f( ) containing keyword 'this'. When f is called by x.f( ), what does 'this' refer to? <br>
+        <em><strong>Answer:</strong></em> when x.f() is called, 'this' refers to x.
+    </p>
+    <p> <strong style="color:blue;">7.</strong> What is a free variable in JavaScript? <br>
+        <em><strong>Answer:</strong></em> Free variables are simply the variables that are neither locally declared nor passed as parameter.In javascript closures, those are simply the variables that the function takes (read and write) in the enclosing scope where is declared the closure or in a parent scope.
+    </p>
+    <p> <strong style="color:blue;">8.</strong> Create an object that has properties with name = "fred" and major="music" and a property that is a function
+        that takes 2 numbers and returns the smallest of the two, or the square of the two if they are equal. <br>
+        <em><strong>Answer:</strong></em> 
+        <pre>
+            var obj={
+                name:"fred",
+                major:"music",
+                use: function(x,y) {
+                       if(x==y){
+                          return Math.sqrt(x);
+                       }else{
+                          return (x&lty)?x:y;
+                       }
+                    }
+              };
+        </pre>
+    </p>
+    <p> <strong style="color:blue;">9.</strong> Write Javascript code for creating three Employee objects using the "new" keyword and a constructor function. Employee objects have the following fields: name, salary, position. <br>
+        <em><strong>Answer:</strong></em>
+        <pre>
+            function Employee(name, salary, position) {
+                            this.name = name;
+                            this.salary = age;
+                            this.position = position;
+                }
+            var e1 = new Employee("George Smith", 35000, "Manager");
+            var e2 = new Employee("Ken Jones", 20000, "Employee");
+            var e3 = new Employee("John Smith", 15000, "Employee");
+        </pre>
+        
+    </p>
+    <p> <strong style="color:blue;">10.</strong> Write a Javascript function that takes any number of input arguments and returns the product of the arguments. <br>
+        <em><strong>Answer:</strong></em> 
+        <pre>
+            function product(x,y, ...more){
+                        var total = x * y;
+                        if(more.length > 0){
+                            for (var i=0;i&ltmore.length; i++) {
+                                total *= more[i];
+                            }
+                        }
+                    console.log(total);
+                    }
+            product(4,3);
+            product(4,3,2);
+
+        </pre>
+    </p>
+    <p> <strong style="color:blue;">11.</strong> Write an arrow function that returns the maximum of its three input arguments. <br>
+        <em><strong>Answer:</strong></em> 
+        <pre>
+            var multiply = (num1, num2,num3)=> {
+                 if(num2>num1 && num2>num3){
+                 return num2;
+                 }else if(num3>num1 && num3>num2){
+                 return num3;
+                 }else{
+                 return num1;
+                 }
+                 };
+
+        console.log(multiply(4,6,2));
+    </pre>
+    </p>
+        
+    
+</div>
+
+</table>
+
+<table>
+    <tr>
+    <td>
+        <a href="https://validator.w3.org/check/referer">
+            <img src="img/valid-xhtml10.png" alt="html validator"/>
+        </a>
+    </td>
+    <td>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <img src="img/w3c-css.png" alt="css validator"/>
+        </a>
+    </td>
+    </tr>
+</table> 
+
+</body>
+</html> 

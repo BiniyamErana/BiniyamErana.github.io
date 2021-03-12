@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>jQuery Quiz I</title>
+<link rel="stylesheet" href="css/styleme.css">
+</head>
+<body>
+<h2>jQuery Quiz I</h2>
+<p id=name> <span class=home><a id=home href="https://biniyamerana.github.io/index.html"><strong>Home</strong></a></span></p>
+
+<div>
+    <p> <strong style="color:blue;">1.</strong> In jQuery terminology, what is the difference between the “jQuery function” and the “jQuery object”? <br>
+        <em><strong>Answer:</strong></em> jQuery function is simply the method to change the state of object.
+        <br>
+        jQuery object is wrapper of DOM object.
+    </p>
+    <p> <strong style="color:blue;">2.</strong> Write jQuery code to find all h1 elements that are children of a div element and make their background color red.
+        <pre>
+            &ltbody&gt
+                &lth1>abc&lt/h1&gt&ltbr&gt&ltdiv&gt
+                &lth1>div-1&lt/h1&gt
+                &lth1>div-2&lt/h1&gt
+                &lt/div&gt
+                &lth1>xyz&lt/h1&gt
+            &lt/body&gt
+            </pre>
+        <em><strong>Answer:</strong></em> 
+        <pre>
+            $( document ).ready(function() {
+                $("div h1").css("background-color","red");
+            });
+            </pre>
+    </p>
+    <p> <strong style="color:blue;">3.</strong> Use a jQuery method to insert the text "YES!" at the end of the &lt; p &gt; element. <br>
+        <pre>
+            &lt!DOCTYPE html&gt
+                &lthtml&gt
+                &lthead&gt
+                &ltscript&gt
+
+                &lt!—INSERT YOUR JQUERY CODE HERE - - &gt
+
+                &lt/script&gt
+                &lt/head&gt
+                &ltbody&gt
+
+                &ltp&gtIs jQuery FUN or what? &lt/p&gt
+
+                &lt/body&gt
+            &lt/html&gt
+            </pre>
+        
+        <em><strong>Answer:</strong></em> 
+        
+        <pre>
+            $( document ).ready(function() {
+                $("p").append("YES!");
+            });
+            </pre>
+    </p>
+
+</div>
+
+</table>
+
+<table>
+    <tr>
+    <td>
+        <a href="https://validator.w3.org/check/referer">
+            <img src="img/valid-xhtml10.png" alt="html validator"/>
+        </a>
+    </td>
+    <td>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <img src="img/w3c-css.png" alt="css validator"/>
+        </a>
+    </td>
+    </tr>
+</table> 
+
+</body>
+</html> 
