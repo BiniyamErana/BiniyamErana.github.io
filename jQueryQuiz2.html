@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>jQuery Quiz II</title>
+<link rel="stylesheet" href="css/styleme.css">
+</head>
+<body>
+<h2>jQuery Quiz II</h2>
+<p id=name> <span class=home><a id=home href="https://biniyamerana.github.io/index.html"><strong>Home</strong></a></span></p>
+
+<div>
+    <p> <strong style="color:blue;">1.</strong> Which, if any, of the following 3 code fragments are equivalent? Explain why they are different, if they are. Explain why they can have different parameters and be equivalent, if they are equivalent. <br>
+        <pre>
+            //code fragment 1
+            $("li").each(function(idx, e) {
+            $(e).css(“color”, “yellow”); });
+
+            //code fragment 2
+            $("li").each(function() {
+            $(this).css(“color”, “yellow”); });
+
+            //code fragment 3
+            $("li").each(function(idx) {
+            $(this).css(“color”, “yellow”); });
+
+            </pre>
+        <em><strong>Answer:</strong></em> All of the code fragments are equivalent. 
+        In first fragment there are two parameters the first is index position of element and the second is current element.
+        So the css is applied to element using passes selector(i.e "e").
+        In the second code fragments the parameters is not passed so css is applied to current selector(li) using "this" keyword. 
+        So there is no need to pass element in function.In the third code fragment there index is passed as parameter but "this" kyword is uses to apply css for current selctor.
+    </p>
+    <p> <strong style="color:blue;">2.</strong> Write a jQuery expression to find all divs on a page that include an unordered list in them, and make their text color be blue.
+        <pre>
+            &ltdiv&gt no ul here &lt/div&gt
+            &ltdiv&gt
+            This does contain a ul.
+            &ltul&gt
+            &ltli&gt the first item &lt/li&gt
+            &ltli&gt the second item &lt/li&gt
+            &lt/ul&gt
+            &lt/div&gt
+            &ltscript&gt
+            &lt!--INSERT YOUR JQUERY CODE HERE --&gt
+        &lt/script&gt
+    &lt/body&gt
+    </pre>
+        <em><strong>Answer:</strong></em> 
+        <pre>
+            $(document).ready($(function(){
+                $("div").has("ul").css("color","blue");
+                });
+            </pre>
+    </p>
+    <p> <strong style="color:blue;">3.</strong> Write jQuery code to append the following div element (and all of its contents) dynamically to the body element. <br>
+        <p>&ltdiv&gt&lth1&gtJQuery Core&lt/h1&gt&lt/div&gt</p>
+        <p>HTML:</p>
+            <pre>
+            &lt!DOCTYPE html&gt
+            &lthtml&gt
+            &lthead&gt
+            &ltmeta charset="utf-8"&gt
+            &lttitle&gtJS Bin&lt/title&gt                        
+            &lt/head&gt
+            &ltbody&gt
+
+            &lt/body&gt
+            &lt/html&gt
+            </pre>
+        
+        <em><strong>Answer:</strong></em> 
+        
+        <pre>
+            $(document).ready($(function(){
+                $("body").append("&ltdiv&gt&lth1&gtJQuery Core&lt/h1&gt&lt/div&gt");
+                });
+        </pre>
+    </p>
+
+</div>
+
+</table>
+
+<table>
+    <tr>
+    <td>
+        <a href="https://validator.w3.org/check/referer">
+            <img src="img/valid-xhtml10.png" alt="html validator"/>
+        </a>
+    </td>
+    <td>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <img src="img/w3c-css.png" alt="css validator"/>
+        </a>
+    </td>
+    </tr>
+</table> 
+
+</body>
+</html> 
