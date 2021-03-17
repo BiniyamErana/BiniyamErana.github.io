@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Javascript Module Exercises</title>
+<link rel="stylesheet" href="css/styleme.css">
+</head>
+<body>
+<h2>Javascript Module Exercises</h2>
+<p id=name> <span class=home><a id=home href="https://biniyamerana.github.io/index.html"><strong>Home</strong></a></span></p>
+
+<div>
+    <p> <strong style="color:blue;">14.</strong> What is the output of the following code? <br>
+        <pre>
+            const promise = new Promise((resolve, reject) => {
+                    reject(“Hattori”);
+                });
+                promise.then(val => alert(“Success: “ + val))
+                    .catch(e => alert(“Error: “ + e));
+        </pre>
+        <em><strong>Answer:</strong></em> 
+        <pre>
+            Output:"Error: Hattori" as an alert
+        </pre>
+    </p>
+    <p> <strong style="color:blue;">15.</strong> What is the output of the following code?
+        <pre>
+            const promise = new Promise((resolve, reject) => {
+                    resolve(“Hattori”);
+                    setTimeout(()=> reject(“Yoshi”), 500);
+                });
+                promise.then(val => alert(“Success: “ + val))
+                    .catch(e => alert(“Error: “ + e));
+        </pre>
+        <em><strong>Answer:</strong></em> 
+        <pre>
+            Output: "Success: Hattori" as an alert
+            </pre>
+    </p>
+    <p> <strong style="color:blue;">16.</strong> What is the output of the following code? <br>
+        <pre>
+            function job(state) {
+                return new Promise(function(resolve, reject) {
+                    if (state) {
+                        resolve('success');
+                    } else {
+                        reject('error');
+                    }
+                });
+               }
+
+               let promise = job(true);
+
+               promise.then(function(data) {
+                        console.log(data);
+                        return job(false);})
+                    .catch(function(error) {
+                        console.log(error);
+                        return 'Error caught';
+                    });
+        </pre>
+        
+        <em><strong>Answer:</strong></em> 
+        
+        <pre>
+            Output: In console, first "success" then "error" 
+        </pre>
+    </p>
+
+</div>
+
+</table>
+
+<table>
+    <tr>
+    <td>
+        <a href="https://validator.w3.org/check/referer">
+            <img src="img/valid-xhtml10.png" alt="html validator"/>
+        </a>
+    </td>
+    <td>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <img src="img/w3c-css.png" alt="css validator"/>
+        </a>
+    </td>
+    </tr>
+</table> 
+
+</body>
+</html> 
